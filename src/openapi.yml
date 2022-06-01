@@ -2,6 +2,7 @@ openapi: "3.0.0"
 info:
   version: "0.0.1"
   title: "planrassadki"
+  description: Если не загружаются пути, подождите или обновите страницу.
 
 servers:
 - url: https://test.com
