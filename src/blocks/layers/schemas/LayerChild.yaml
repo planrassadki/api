@@ -1,0 +1,25 @@
+description: Должен иметь тип элемента (поле type), а также данные элемента (поле data), причем у data должно быть поле location
+oneOf:
+  - type: object
+    properties:
+      type:
+        type: string
+        enum: ["table"]
+      data:
+        $ref: '../../tables/schemas/Table.yaml'
+  - type: object
+    properties:
+      type:
+        type: string
+        enum: ["chair"]
+      data:
+        $ref: '../../chairs/schemas/Chair.yaml'
+  - type: object
+    properties:
+      type:
+        type: string
+      data: 
+        type: object
+        properties: 
+          location:
+            $ref: "./Location.yaml"

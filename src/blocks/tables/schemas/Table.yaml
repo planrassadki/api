@@ -1,0 +1,6 @@
+type: object
+properties:
+  id:
+    $ref: '../../../schemas/ID.yaml'
+  location:
+    $ref: '../../layers/schemas/Location.yaml'

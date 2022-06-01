@@ -1,0 +1,10 @@
+type: object
+properties:
+  id:
+    $ref: '../../../schemas/ID.yaml'
+  location:
+    $ref: '../../layers/schemas/Location.yaml'
+  category:
+    type: string
+  title:
+    type: string

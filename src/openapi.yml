@@ -1,0 +1,97 @@
+openapi: "3.0.0"
+info:
+  version: "0.0.1"
+  title: "planrassadki"
+
+servers:
+- url: https://test.com
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    "--------------- Common ---------------": {}
+    ID:
+      $ref: './schemas/ID.yaml'
+    Pagination:
+      $ref: './schemas/Pagination.yaml'
+
+    "--------------- User ---------------": {}
+    LoginPayload:
+      $ref: './blocks/auth/schemas/LoginPayload.yaml'
+
+    User:
+      $ref: './blocks/users/schemas/User.yaml'
+
+    "--------------- Project ---------------": {}
+    Project:
+      $ref: './blocks/projects/schemas/Project.yaml'
+    ProjectChild:
+      $ref: './blocks/projects/schemas/ProjectChild.yaml'
+
+    "--------------- Layer ---------------": {}
+    Layer:
+      $ref: './blocks/layers/schemas/Layer.yaml'
+    Location:
+      $ref: './blocks/layers/schemas/Location.yaml'
+    LayerChild:
+      $ref: './blocks/layers/schemas/LayerChild.yaml'
+
+
+    "--------------- Layer Children ---------------": {}
+    Chair:
+      $ref: './blocks/chairs/schemas/Chair.yaml'
+
+    Table:
+      $ref: './blocks/tables/schemas/Table.yaml'
+
+
+
+
+security:
+  - bearerAuth: [] 
+
+paths:
+  /auth/jwt/login:
+    $ref: './blocks/auth.jwt/paths/auth-jwt-login.yaml'
+  /auth/jwt/refresh:
+    $ref: './blocks/auth.jwt/paths/auth-jwt-refresh.yaml'
+  /auth/jwt/logout:
+    $ref: './blocks/auth.jwt/paths/auth-jwt-logout.yaml'
+
+  /users:
+    $ref: './blocks/users/paths/users.yaml'
+  /users/{user_id}:
+    $ref: './blocks/users/paths/users-id.yaml'
+
+  /projects:
+    $ref: './blocks/projects/paths/projects.yaml'
+  /projects/{project_id}:
+    $ref: './blocks/projects/paths/projects-id.yaml'
+  /projects/{project_id}/users:
+    $ref: './blocks/projects/paths/projects-id-users.yaml'
+  /projects/{project_id}/children:
+    $ref: './blocks/projects/paths/projects-id-children.yaml'
+  
+  /projects/{project_id}/layers:
+    $ref: './blocks/layers/paths/layers.yaml'
+  /projects/{project_id}/layers/{layer_id}:
+    $ref: './blocks/layers/paths/layers-id.yaml'
+  /projects/{project_id}/layers/{layer_id}/children:
+    $ref: './blocks/layers/paths/layers-id-children.yaml'
+
+  /projects/{project_id}/chairs:
+    $ref: './blocks/chairs/paths/chairs.yaml'
+  /projects/{project_id}/chairs/{chair_id}:
+    $ref: './blocks/chairs/paths/chairs-id.yaml'
+
+  /projects/{project_id}/tables:
+    $ref: './blocks/tables/paths/tables.yaml'
+  /projects/{project_id}/tables/{table_id}:
+    $ref: './blocks/tables/paths/tables-id.yaml'
+
+

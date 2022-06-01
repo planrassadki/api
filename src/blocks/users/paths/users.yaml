@@ -1,0 +1,34 @@
+get:
+  summary: "Список пользователей"
+  tags: [User]
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '../schemas/User.yaml'
+              pagination:
+                $ref: '../../../schemas/Pagination.yaml'
+                
+post:
+  summary: "Зарегистрировать пользователя"
+  tags: [User]
+  security: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../auth/schemas/LoginPayload.yaml'
+  responses:
+    201:
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/User.yaml'

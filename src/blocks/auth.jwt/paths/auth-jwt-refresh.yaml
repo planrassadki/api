@@ -1,0 +1,28 @@
+post:
+  summary: "Обновить токен"
+  tags: [Auth.JWT]
+  security: []
+  parameters:
+    - name: refresh_token
+      in: cookie
+      required: true
+      schema:
+        type: string
+  responses:
+    200:
+      description: OK
+      headers:
+        Set-Cookie:
+          description: "Устанавливает refresh_token в куку"
+          schema: 
+            type: string
+            example: refresh_token=abcde12345; Path=/; HttpOnly
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              access_token:
+                type: string
+              refresh_token:
+                type: string

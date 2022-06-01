@@ -1,0 +1,20 @@
+get:
+  summary: "Информация о столе"
+  tags: [Table]
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Table.yaml'
+
+delete:
+  summary: "Удалить стол"
+  tags: [Table]
+  responses:
+    204:
+      description: Deleted
+parameters:
+    - $ref: '../../projects/parameters/project_id.yaml'
+    - $ref: '../parameters/table_id.yaml'

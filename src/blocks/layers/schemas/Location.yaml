@@ -1,0 +1,12 @@
+type: object
+properties:
+  layer_id:
+    type: integer
+  start_x:
+    type: integer
+  start_y:
+    type: integer
+  end_x:
+    type: integer
+  end_y:
+    type: integer

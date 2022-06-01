@@ -1,0 +1,20 @@
+get:
+  summary: "Информация о слое"
+  tags: [Layer]
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Layer.yaml'
+      
+delete:
+  summary: "Удалить слой"
+  tags: [Layer]
+  responses:
+    204:
+      description: Deleted
+parameters:
+    - $ref: '../../projects/parameters/project_id.yaml'
+    - $ref: '../parameters/layer_id.yaml'

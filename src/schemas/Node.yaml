@@ -1,0 +1,26 @@
+type: object
+properties:
+  start_x:
+    type: integer
+  start_y:
+    type: integer
+  end_x:
+    type: integer
+  end_y:
+    type: integer
+  content:
+    oneOf:
+      - type: object
+        properties:
+          type:
+            type: string
+            enum: ["table"]
+          data:
+            $ref: "./Table.yaml"
+      - type: object
+        properties:
+          type:
+            type: string
+            enum: ["chair"]
+          data:
+            $ref: "./Chair.yaml"

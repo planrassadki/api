@@ -1,0 +1,8 @@
+type: object
+properties:
+  id: 
+    $ref: "./ID.yaml"
+  category: 
+    type: string
+  label: 
+    type: string

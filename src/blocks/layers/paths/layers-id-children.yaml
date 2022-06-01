@@ -1,0 +1,20 @@
+get:
+  summary: "Список дочерних элементов слоя"
+  tags: [Layer]
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '../schemas/LayerChild.yaml'
+              pagination:
+                $ref: '../../../schemas/Pagination.yaml'
+parameters:
+    - $ref: '../../projects/parameters/project_id.yaml'
+    - $ref: '../parameters/layer_id.yaml'

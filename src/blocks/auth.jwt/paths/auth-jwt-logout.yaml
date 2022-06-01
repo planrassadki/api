@@ -1,0 +1,6 @@
+post:
+  summary: "Выйти из системы"
+  tags: [Auth.JWT]
+  responses:
+    200:
+      description: OK

@@ -1,0 +1,19 @@
+get:
+  summary: "Информация о проекте"
+  tags: [Project]
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Project.yaml'
+
+delete:
+  summary: "Удалить проект"
+  tags: [Project]
+  responses:
+    204:
+      description: Deleted
+parameters:
+    - $ref: '../parameters/project_id.yaml'  

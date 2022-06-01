@@ -1,0 +1,5 @@
+name: layer_id
+in: path
+required: true
+schema:
+  $ref: "../../../schemas/ID.yaml"

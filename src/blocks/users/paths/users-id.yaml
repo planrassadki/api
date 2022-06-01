@@ -1,0 +1,19 @@
+get:
+  summary: "Информация о пользователе"
+  tags: [User]
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/User.yaml'
+
+delete:
+  summary: "Удалить пользователя"
+  tags: [User]
+  responses:
+    204:
+      description: Deleted
+parameters:
+    - $ref: '../parameters/user_id.yaml'

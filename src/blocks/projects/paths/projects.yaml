@@ -1,0 +1,28 @@
+get:
+  summary: "Список проектов"
+  tags: [Project]
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '../schemas/Project.yaml'
+              pagination:
+                $ref: '../../../schemas/Pagination.yaml'
+
+post:
+  summary: "Создать проект"
+  tags: [Project]
+  responses:
+    201:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Project.yaml'

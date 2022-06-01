@@ -1,0 +1,19 @@
+get:
+  summary: "Список дочерних элементов проекта"
+  tags: [Project]
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '../schemas/ProjectChild.yaml'
+              pagination:
+                $ref: '../../../schemas/Pagination.yaml'
+parameters:
+    - $ref: '../parameters/project_id.yaml'

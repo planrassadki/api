@@ -1,0 +1,27 @@
+post:
+  summary: "Войти в систему"
+  tags: [Auth.JWT]
+  security: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../auth/schemas/LoginPayload.yaml'
+  responses:
+    200:
+      description: OK
+      headers:
+        Set-Cookie:
+          description: "Устанавливает refresh_token в куку"
+          schema: 
+            type: string
+            example: refresh_token=abcde12345; Path=/; HttpOnly
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              access_token:
+                type: string
+              refresh_token:
+                type: string

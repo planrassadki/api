@@ -1,0 +1,38 @@
+get:
+  summary: "Список стульев"
+  tags: [Chair]
+  parameters:
+    - $ref: '../../projects/parameters/project_id.yaml'
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '../schemas/Chair.yaml'
+              pagination:
+                $ref: '../../../schemas/Pagination.yaml'
+                
+post:
+  summary: "Создать стул"
+  description: "В будущем вместо location нужно будет передавать только координаты стула, его тип и наклон"
+  tags: [Chair]
+  parameters:
+    - $ref: '../../projects/parameters/project_id.yaml'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/Chair.yaml'
+  responses:
+    201:
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Chair.yaml'

@@ -1,0 +1,6 @@
+type: object
+properties:
+  id:
+    $ref: '../../../schemas/ID.yaml'
+  platform_user:
+    $ref: '../../users/schemas/User.yaml'

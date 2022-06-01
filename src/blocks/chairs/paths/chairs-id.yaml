@@ -1,0 +1,20 @@
+get:
+  summary: "Информация о стуле"
+  tags: [Chair]
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Chair.yaml'
+
+delete:
+  summary: "Удалить стул"
+  tags: [Chair]
+  responses:
+    204:
+      description: Deleted
+parameters:
+    - $ref: '../../projects/parameters/project_id.yaml'
+    - $ref: '../parameters/chair_id.yaml'
