@@ -68,6 +68,8 @@ paths:
     $ref: './blocks/users/paths/users.yaml'
   /users/{user_id}:
     $ref: './blocks/users/paths/users-id.yaml'
+  /users/{user_id}/projects:
+    $ref: './blocks/users/paths/users-id-projects.yaml'
 
   /projects:
     $ref: './blocks/projects/paths/projects.yaml'

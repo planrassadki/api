@@ -1,0 +1,17 @@
+get:
+  summary: "Список проектов пользователя"
+  tags: [User]
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '../../projects/schemas/Project.yaml'
+              pagination:
+                $ref: '../../../schemas/Pagination.yaml'
