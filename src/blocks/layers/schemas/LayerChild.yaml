@@ -1,4 +1,8 @@
-description: Должен иметь тип элемента (поле type), а также данные элемента (поле data), причем у data должно быть поле location
+description: | 
+  Должен иметь тип элемента (поле type), 
+  а также данные элемента (поле data),
+  причем у data должно быть поле geometry и layer_id.
+  Также размеры не должны пересекаться с размерами слоя
 oneOf:
   - type: object
     properties:
@@ -21,5 +25,7 @@ oneOf:
       data: 
         type: object
         properties: 
-          location:
-            $ref: "./Location.yaml"
+          geometry:
+            $ref: "./Geometry.yaml"
+          layer_id:
+            type: integer

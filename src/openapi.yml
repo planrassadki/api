@@ -37,8 +37,8 @@ components:
     "--------------- Layer ---------------": {}
     Layer:
       $ref: './blocks/layers/schemas/Layer.yaml'
-    Location:
-      $ref: './blocks/layers/schemas/Location.yaml'
+    Geometry:
+      $ref: './blocks/layers/schemas/Geometry.yaml'
     LayerChild:
       $ref: './blocks/layers/schemas/LayerChild.yaml'
 

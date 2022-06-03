@@ -22,7 +22,7 @@ get:
                 
 post:
   summary: "Создать стул"
-  description: "В будущем вместо location нужно будет передавать только координаты стула, его тип и наклон"
+  description: "В будущем вместо geometry нужно будет передавать только координаты стула, его тип и наклон"
   tags: [Chair]
   parameters:
     - $ref: '../../projects/parameters/project_id.yaml'

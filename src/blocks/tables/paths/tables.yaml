@@ -22,7 +22,7 @@ get:
                 
 post:
   summary: "Создать стол"
-  description: "В будущем вместо location нужно будет передавать только координаты стола, его размеры и наклон"
+  description: "В будущем вместо geometry нужно будет передавать только координаты стола, его размеры и наклон"
   tags: [Table]
   parameters:
     - $ref: '../../projects/parameters/project_id.yaml'

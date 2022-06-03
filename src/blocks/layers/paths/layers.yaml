@@ -22,6 +22,10 @@ get:
                 
 post:
   summary: "Создать слой"
+  description: | 
+    start_x и start_y должны быть равны 0,
+    в будущем вместо geometry нужно будет передовать размеры слоя, 
+    а если этот слой будет вложенным, еще и координаты на родительском слое
   tags: [Layer]
   parameters:
     - $ref: '../../projects/parameters/project_id.yaml'

@@ -1,7 +1,5 @@
 type: object
 properties:
-  layer_id:
-    type: integer
   start_x:
     type: integer
   start_y:

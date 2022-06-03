@@ -4,3 +4,5 @@ properties:
     $ref: '../../../schemas/ID.yaml'
   name:
     type: string
+  geometry:
+    $ref: './Geometry.yaml'
