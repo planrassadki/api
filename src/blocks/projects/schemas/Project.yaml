@@ -2,3 +2,5 @@ type: object
 properties:
   id:
     $ref: '../../../schemas/ID.yaml'
+  name:
+    type: string
