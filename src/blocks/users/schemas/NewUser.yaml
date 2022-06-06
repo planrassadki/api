@@ -2,5 +2,7 @@ type: object
 properties:
   email: 
     type: string
+  fullname: 
+    type: string
   password: 
     type: string
