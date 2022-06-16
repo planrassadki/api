@@ -6,3 +6,5 @@ properties:
     $ref: '../../layers/schemas/Geometry.yaml'
   layer_id:
     type: integer
+  category:
+    type: string
