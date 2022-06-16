@@ -25,3 +25,5 @@ post:
                 type: string
               refresh_token:
                 type: string
+              user:
+                $ref: "../../users/schemas/User.yaml"
