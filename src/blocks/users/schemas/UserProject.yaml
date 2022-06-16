@@ -1,6 +1,6 @@
 type: object
 properties:
-  user:
-    $ref: '../../users/schemas/User.yaml'
+  project:
+    $ref: '../../projects/schemas/Project.yaml'
   last_interaction_at:
     $ref: '../../../schemas/Date.yaml'

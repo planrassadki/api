@@ -20,6 +20,8 @@ components:
       $ref: './schemas/ID.yaml'
     Pagination:
       $ref: './schemas/Pagination.yaml'
+    Date:
+      $ref: './schemas/Date.yaml'
 
     "--------------- User ---------------": {}
     LoginPayload:
@@ -28,11 +30,16 @@ components:
     User:
       $ref: './blocks/users/schemas/User.yaml'
 
+    UserProject:
+      $ref: './blocks/users/schemas/UserProject.yaml'
+
     "--------------- Project ---------------": {}
     Project:
       $ref: './blocks/projects/schemas/Project.yaml'
     ProjectChild:
       $ref: './blocks/projects/schemas/ProjectChild.yaml'
+    ProjectUser:
+      $ref: './blocks/projects/schemas/ProjectUser.yaml'
 
     "--------------- Layer ---------------": {}
     Layer:

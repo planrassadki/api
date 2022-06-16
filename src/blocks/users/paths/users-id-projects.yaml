@@ -16,6 +16,6 @@ get:
               data:
                 type: array
                 items:
-                  $ref: '../../projects/schemas/Project.yaml'
+                  $ref: '../schemas/UserProject.yaml'
               pagination:
                 $ref: '../../../schemas/Pagination.yaml'
