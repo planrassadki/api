@@ -6,3 +6,9 @@ properties:
     type: string
   geometry:
     $ref: './Geometry.yaml'
+  children_types:
+    example: ["chair", "table"]
+    readOnly: true
+    type: array
+    items: 
+      type: string
