@@ -36,8 +36,6 @@ components:
     "--------------- Project ---------------": {}
     Project:
       $ref: './blocks/projects/schemas/Project.yaml'
-    ProjectChild:
-      $ref: './blocks/projects/schemas/ProjectChild.yaml'
     ProjectUser:
       $ref: './blocks/projects/schemas/ProjectUser.yaml'
 
@@ -84,8 +82,6 @@ paths:
     $ref: './blocks/projects/paths/projects-id.yaml'
   /projects/{project_id}/users:
     $ref: './blocks/projects/paths/projects-id-users.yaml'
-  /projects/{project_id}/children:
-    $ref: './blocks/projects/paths/projects-id-children.yaml'
   
   /projects/{project_id}/layers:
     $ref: './blocks/layers/paths/layers.yaml'
