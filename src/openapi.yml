@@ -44,8 +44,6 @@ components:
       $ref: './blocks/layers/schemas/Layer.yaml'
     Geometry:
       $ref: './blocks/layers/schemas/Geometry.yaml'
-    LayerChild:
-      $ref: './blocks/layers/schemas/LayerChild.yaml'
 
 
     "--------------- Layer Children ---------------": {}
@@ -87,8 +85,6 @@ paths:
     $ref: './blocks/layers/paths/layers.yaml'
   /projects/{project_id}/layers/{layer_id}:
     $ref: './blocks/layers/paths/layers-id.yaml'
-  /projects/{project_id}/layers/{layer_id}/children:
-    $ref: './blocks/layers/paths/layers-id-children.yaml'
 
   /projects/{project_id}/chairs:
     $ref: './blocks/chairs/paths/chairs.yaml'
