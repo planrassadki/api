@@ -90,10 +90,14 @@ paths:
     $ref: './blocks/chairs/paths/chairs.yaml'
   /projects/{project_id}/chairs/{chair_id}:
     $ref: './blocks/chairs/paths/chairs-id.yaml'
+  /projects/{project_id}/layers/{layer_id}/chairs:
+    $ref: './blocks/chairs/paths/layer-chairs.yaml'
 
   /projects/{project_id}/tables:
     $ref: './blocks/tables/paths/tables.yaml'
   /projects/{project_id}/tables/{table_id}:
     $ref: './blocks/tables/paths/tables-id.yaml'
+  /projects/{project_id}/layers/{layer_id}/tables:
+    $ref: './blocks/tables/paths/layer-tables.yaml'
 
 

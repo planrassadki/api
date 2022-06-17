@@ -1,0 +1,22 @@
+get:
+  summary: "Список стульев слоя"
+  tags: [Chair]
+  parameters:
+    - $ref: '../../projects/parameters/project_id.yaml'
+    - $ref: '../../layers/parameters/layer_id.yaml'
+    - $ref: '../../../parameters/offset.yaml'
+    - $ref: '../../../parameters/limit.yaml'
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '../schemas/Chair.yaml'
+              pagination:
+                $ref: '../../../schemas/Pagination.yaml'
