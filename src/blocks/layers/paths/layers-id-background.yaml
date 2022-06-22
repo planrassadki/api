@@ -1,0 +1,33 @@
+get:
+  summary: "Задний фон слоя (картинка)"
+  tags: [Layer]
+  responses:
+    200:
+      description: OK
+      content:
+        image/*:
+          type: string
+          format: binary
+    204:
+      description: No content (Если задний фон не установлен)
+      
+post:
+  summary: "Загрузить задний фон слоя"
+  description: 'Для загрузки используется formData с полем background типа file. В html: &lt;input name="background" type="file"&gt;'
+  tags: [Layer]
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          properties:
+            background:
+              type: string
+              format: binary
+  responses:
+    200:
+      description: OK
+
+parameters:
+    - $ref: '../../projects/parameters/project_id.yaml'
+    - $ref: '../parameters/layer_id.yaml'

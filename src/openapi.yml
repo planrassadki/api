@@ -85,6 +85,8 @@ paths:
     $ref: './blocks/layers/paths/layers.yaml'
   /projects/{project_id}/layers/{layer_id}:
     $ref: './blocks/layers/paths/layers-id.yaml'
+  /projects/{project_id}/layers/{layer_id}/background:
+    $ref: './blocks/layers/paths/layers-id-background.yaml'
 
   /projects/{project_id}/chairs:
     $ref: './blocks/chairs/paths/chairs.yaml'
